@@ -7,6 +7,11 @@ func TimeNowUTC() time.Time {
 	return time.Now().UTC()
 }
 
+//TimeNowUTCString get time now UTC string
+func TimeNowUTCString() string {
+	return ConvertTimeToString(TimeNowUTC())
+}
+
 // ConvertUnixToTimeUTC unix -> time
 func ConvertUnixToTimeUTC(unix int64) time.Time {
 	return time.Unix(unix, 0).UTC()
